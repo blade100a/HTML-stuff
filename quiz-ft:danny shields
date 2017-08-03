@@ -1,0 +1,167 @@
+<!-- Danny Shields
+Feb, 8, 2016
+Mark analyzer
+This is an excercise to work with selection in html and php-->
+<!DOCTYPE>
+<html>
+	<head>
+		<link href="style.css" rel="stylesheet">
+		<title>Computer Quiz</title>
+		<div id="header">
+			<div id="title">
+				<h1>Computer Science ICS4U Quiz</h1>
+			</div>
+			<div id="by">
+				<h3>By Harri Pahirathan and Danny Shields</h3>
+			</div>
+		</div>
+	</head>
+
+	<body>
+		<div id="questions">
+			<form action="answer.php" method="post">
+				<?php
+					$password=$_POST["password"];
+
+					//this kills the page if the password is incorrect
+					if($password!="ics4u")
+					{
+						header("Location: http://mrcomputers.info/PahirathanHarri/assignments/quiz.html");
+						die();
+					}
+				?>
+
+			<!--Question 1-->
+			<!--this makes use of selection-->
+			<div id="question1">
+				<h3>1. What does HTML stand for in computer language?</h3>
+				<input type="radio" name="question1" value="a" required>Humble Trees Make Languages<br>
+				<input type="radio" name="question1" value="b">Hyper Text Markup Language<br>
+				<input type="radio" name="question1" value="c">Hyperbeam Top Maker Laso<br>
+				<input type="radio" name="question1" value="d">Hyper Truck Made Loads<br>
+			</div>
+			<hr>
+
+			<!--Question 2-->
+			<!--this makes use of selection-->
+			<div id="question2">
+				<h3>2. Match the binary number with the coreect decimal.</h3>
+				<div id="question2a">
+					<strong>BINARY</strong>
+					<p>A) &lt;0101&gt;</p>
+					<p>B) &lt;1101&gt;</p>
+				</div>
+				<div id="question2b">
+					<strong>DECIMALS</strong>
+					<p>13 <select name="question2a" required>
+						<option value="">Select one</option>
+						<option value="a">A</option>
+					  	<option value="b">B</option>
+					</select></p>
+					<p>5 <select name="question2b" required>
+						<option value="">Select one</option>
+						<option value="a">A</option>
+					 	<option value="b">B</option>
+					</select></p>
+				</div>
+			</div>
+			<hr>
+
+			<!--Question 3-->
+			<!--this makes use of selection-->
+			<div id="question3">
+				<h3>4. WWW stands for World Wide Web.</h3>
+				<input type="radio" name="question3" value="t" required>true<br>
+				<input type="radio" name="question3" value="f" required>false<br>
+			</div><hr>
+
+			<!--Question 4-->
+			<div id="question4">
+				<!--this makes use of selection with radio buttons-->
+				<h3>4. Question 4: What computer component is this?</h3>
+				<img src ="quizImages/pic_2.jpg" width="300px" height="200px"></img><br>
+				<input type='radio' name='question4' value='4a' required>a) CPU<br>
+				<input type='radio' name='question4' value='4b'>b) RAM<br>
+				<input type='radio' name='question4' value='4c'>c) BIOS<br>
+				<input type='radio' name='question4' value='4d'>d) Network Card<br>
+				
+			</div>
+			<hr>
+			<!--Question 5-->
+			<!--this makes use of selection with text boxes-->
+			<div id="question5">
+				<h3>
+				5. A <input type="text" name="question5a" required> is used for clicking and
+				a <input type="text" name="question5b" required> is used for typing. 
+				They are both <input type="text" name="question5c" required> devices as opposed to output devices.
+				</h3>
+				<br>
+			</div>
+			<hr>
+
+			<!--Question 6-->
+			<!--this makes use of selection with radio buttons and images-->
+			<div id="question6">
+				<h3>6. Which of these is an input device?</h3>
+				<input type='radio' name='question6' value='6a' required>
+				<img src ="quizImages/mouse.jpg" width="200px" height="150px">
+				<input type='radio' name='question6' value='6b'>
+				<img src ="quizImages/speakers.jpg" width="200px" height="150px"><br>
+				<input type='radio' name='question6' value='6c'>
+				<img src ="quizImages/monitor.jpg" width="200px" height="150px">
+				<input type='radio' name='question6' value='6d'>
+				<img src ="quizImages/computer.jpg" width="200px" height="150px">
+				<br>
+			</div>
+			<hr>
+
+			<!--Question 7-->
+			<!--this makes use of selection-->
+			<div id="question7">
+				<h3>7. The personal computer was invented by Sir. Isaac Newton.</h3>
+				<input type="radio" name="question7" value="t" required>true<br>
+				<input type="radio" name="question7" value="f" required>false<br>
+			</div><hr>
+
+			<!--Question 8-->
+			<!--this makes use of selection-->
+			<div id="question8">
+				<h3>8. Which file extension is commonly used for a picture?</h3><br>
+				<input type='radio' name='question8' value='8a' required>.ppt<br>
+				<input type='radio' name='question8' value='8b'>.docx<br>
+				<input type='radio' name='question8' value='8c'>.php<br>
+				<input type='radio' name='question8' value='8d'>.jpg<br><br>
+			</div>
+			<hr>
+
+			<!--Question 9-->
+			<!--this makes use of selection-->
+			<div id="question9">
+				<h3>9. What does the acronym I.T. stands for?</h3><br>
+				<p>I <select name="question9a" required>
+					<option value="a">Information</option>
+				  	<option value="b">Intense</option>
+				  	<option value="c">Internet</option>
+				</select></p>
+				<p>T <select name="question9b" required>
+					<option value="a">Table</option>
+				 	<option value="b">Technology</option>
+				 	<option value="c">Tag</option>
+				</select></p>
+				<br>
+			</div>
+			<hr>
+
+			<!--Question 10-->
+			<!--this makes use of selection-->
+			<div id="question10">
+						<h2>10. THE FINAL QUESTION AND THAT HARDEST ONE OF THEM ALL! THE GREATEST COMPUTER SCIENCE TEACHER OF ALL THE LAND IS...? </h2>
+						<input type="text" name="question10" required><br>
+					</div>
+					<br><hr>
+
+			<input type='submit' value='Enter' width=20% button class="button button4">
+		</form>
+	
+	</body>
+</html>
